@@ -54,6 +54,9 @@ function createDonghuaCard(donghua) {
 
 // --- Play Page Logic (play.html) ---
 function renderPlayPage() {
+    // A Fix to ensure donghuaData is available
+    const playData = window.donghuaData || donghuaData; 
+    
     const params = new URLSearchParams(window.location.search);
     const donghuaId = parseInt(params.get('id'));
     let currentEpIndex = parseInt(params.get('ep'));
@@ -70,7 +73,7 @@ function renderPlayPage() {
     document.getElementById('donghua-title').textContent = donghua.title;
     updateVideoPlayer(donghua, currentEpIndex);
     createEpisodeButtons(donghua, currentEpIndex);
-    renderRecommendations(donghuaId);
+    renderRecommendations(donghuaId, playData);
 }
 
 function updateVideoPlayer(donghua, epIndex) {
@@ -121,7 +124,7 @@ function createEpisodeButtons(donghua, currentEpIndex) {
     });
 }
 
-function renderRecommendations(currentDonghuaId) {
+function renderRecommendations(currentDonghuaId, playData) {
     const recommendationsContainer = document.getElementById('recommendations');
     recommendationsContainer.innerHTML = '';
 
