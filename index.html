@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DICAKUN - Situs Nonton Donghua Terbaik</title>
+    <title>DICAKUN</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
@@ -35,6 +35,9 @@
         .episode-badge {
             @apply absolute top-2 left-2 bg-red-600 text-white text-xs font-semibold px-2 py-1 rounded-full;
         }
+        .donghua-badge {
+            @apply absolute top-2 right-2 px-2 py-1 bg-cyan-500 text-white text-xs font-bold rounded-full transform -translate-x-1/2 -translate-y-1/2;
+        }
         .card-group-title {
             @apply text-2xl font-bold border-l-4 border-blue-500 pl-3 mb-6;
         }
@@ -61,7 +64,9 @@
     <!-- Header Section -->
     <header class="bg-gray-800 p-4 shadow-lg sticky top-0 z-50">
         <div class="container mx-auto flex items-center justify-between">
-            <a href="index.html" class="text-2xl font-bold text-red-500"><span class="text-red-500">DICA</span><span class="text-white">KUN</span></a>
+            <a href="index.html" class="text-2xl font-bold">
+                <span class="text-red-500">DICA</span><span class="text-white">KUN</span>
+            </a>
             <div class="flex items-center space-x-4">
                 <input type="text" placeholder="Cari donghua..." class="hidden md:block p-2 rounded-full bg-gray-700 text-gray-100 placeholder-gray-400 border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
                 <button class="text-gray-400 hover:text-blue-500 focus:outline-none search-icon">
@@ -188,7 +193,7 @@
         <p class="text-sm text-gray-400">&copy; 2025 DICAKUN. Hak Cipta Dilindungi.</p>
     </footer>
 
-    <!-- Script files -->
+    <!-- Scripts -->
     <script src="movie.js"></script>
     <script src="script.js"></script>
 </body>
