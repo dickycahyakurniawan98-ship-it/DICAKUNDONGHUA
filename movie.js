@@ -6,21 +6,21 @@ const donghuaData = [
     {
         id: 1,
         title: "Renegade Immortal",
-        poster: "https://i.imgur.com/WBAhP1S.png",
+        poster: "https://i.imgur.com/mGXAPTG.jpeg",
         status: "ongoing",
         episodes: [
             {
                 title: "Episode 1",
                 servers: [
-                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7j0vzg?autoplay=1" },
-                    { name: "Server 2", url: "https://www.dailymotion.com/embed/video/x7j0vzg?autoplay=1" }
+                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1" },
+                    { name: "Server 2", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1" }
                 ]
             },
             {
                 title: "Episode 2",
                 servers: [
-                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7j0vzg?autoplay=1" },
-                    { name: "Server 2", url: "https://www.dailymotion.com/embed/video/x7j0vzg?autoplay=1" }
+                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1" },
+                    { name: "Server 2", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1" }
                 ]
             }
         ]
@@ -93,3 +93,4 @@ const donghuaData = [
 ];
 
 const playData = donghuaData;
+
