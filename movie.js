@@ -6,7 +6,7 @@ const donghuaData = [
     {
         id: 1,
         title: "Renegade Immortal",
-        poster: "https://placehold.co/500x700/6B46C1/white?text=Poster+1",
+        poster: "https://i.imgur.com/mGXAPTG.jpeg",
         status: "ongoing",
         episodes: [
             {
@@ -93,4 +93,5 @@ const donghuaData = [
 ];
 
 const playData = donghuaData;
+
 
