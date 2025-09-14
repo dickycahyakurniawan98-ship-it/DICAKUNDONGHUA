@@ -5,22 +5,22 @@
 const donghuaData = [
     {
         id: 1,
-        title: "Judul Donghua 1",
+        title: "Renegade Immortal",
         poster: "https://placehold.co/500x700/6B46C1/white?text=Poster+1",
         status: "ongoing",
         episodes: [
             {
                 title: "Episode 1",
                 servers: [
-                    { name: "Server 1", url: "https://example.com/video1-1.mp4" },
-                    { name: "Server 2", url: "https://example.com/video1-2.mp4" }
+                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1," },
+                    { name: "Server 2", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1," }
                 ]
             },
             {
                 title: "Episode 2",
                 servers: [
-                    { name: "Server 1", url: "https://example.com/video1-3.mp4" },
-                    { name: "Server 2", url: "https://example.com/video1-4.mp4" }
+                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1," },
+                    { name: "Server 2", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1," }
                 ]
             }
         ]
@@ -93,3 +93,4 @@ const donghuaData = [
 ];
 
 const playData = donghuaData;
+
