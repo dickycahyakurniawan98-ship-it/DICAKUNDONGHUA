@@ -5,13 +5,13 @@ const donghuaData = [
     {
         id: 1,
         title: "Renegade Immortal",
-        poster: "https://i.imgur.com/mGXAPTG.jpeg",
+        poster: "https://i.imgur.com/gKzJ4cK.jpeg",
         status: "ongoing",
         episodes: [
             {
                 title: "Episode 1",
                 servers: [
-                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy" },
+                    { name: "Server 1", url: "https://www.youtube.com/embed/z4y5N2oM6a4" },
                     { name: "Server 2", url: "https://www.youtube.com/embed/Fjqj4cM0fU4" }
                 ]
             },
@@ -101,6 +101,7 @@ const donghuaData = [
 // Logika untuk halaman index.html
 if (document.getElementById('latest-episodes')) {
     const latestEpisodesContainer = document.getElementById('latest-episodes');
+    const popularEpisodesContainer = document.getElementById('most-popular'); // Menambahkan container untuk Terpopuler
     const searchInput = document.getElementById('searchInput');
     const searchButton = document.getElementById('searchButton');
     const mainTitle = document.querySelector('.card-group-title');
@@ -125,14 +126,14 @@ if (document.getElementById('latest-episodes')) {
         `;
     };
 
-    const displayDonghua = (donghuas) => {
-        latestEpisodesContainer.innerHTML = '';
+    const displayDonghua = (donghuas, container) => {
+        container.innerHTML = '';
         if (donghuas.length === 0) {
-            latestEpisodesContainer.innerHTML = '<p class="col-span-full text-center text-gray-400">Tidak ada hasil ditemukan.</p>';
+            container.innerHTML = '<p class="col-span-full text-center text-gray-400">Tidak ada hasil ditemukan.</p>';
         } else {
             donghuas.forEach(donghua => {
                 const cardHTML = createDonghuaCard(donghua);
-                latestEpisodesContainer.innerHTML += cardHTML;
+                container.innerHTML += cardHTML;
             });
         }
     };
@@ -142,16 +143,28 @@ if (document.getElementById('latest-episodes')) {
         const filteredDonghua = donghuaData.filter(donghua =>
             donghua.title.toLowerCase().includes(query)
         );
-        displayDonghua(filteredDonghua);
+        displayDonghua(filteredDonghua, latestEpisodesContainer);
         mainTitle.textContent = query ? `Hasil Pencarian untuk "${query}"` : 'Terbaru';
+
+        if (query) {
+            // Sembunyikan bagian terpopuler saat mencari
+            document.querySelector('#most-popular-section').style.display = 'none';
+        } else {
+            document.querySelector('#most-popular-section').style.display = 'block';
+        }
     };
 
     searchButton.addEventListener('click', handleSearch);
     searchInput.addEventListener('input', handleSearch);
     mobileSearchButton.addEventListener('click', handleSearch);
 
+    // Menampilkan donghua terbaru
+    displayDonghua(donghuaData, latestEpisodesContainer);
 
-    displayDonghua(donghuaData);
+    // Menampilkan donghua terpopuler
+    const shuffled = donghuaData.sort(() => 0.5 - Math.random());
+    const popularDonghua = shuffled.slice(0, 6);
+    displayDonghua(popularDonghua, popularEpisodesContainer);
 }
 
 // Logika untuk halaman play.html
