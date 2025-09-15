@@ -5,7 +5,7 @@ const donghuaData = [
     {
         id: 1,
         title: "Renegade Immortal",
-        poster: "https://i.imgur.com/gKzJ4cK.jpeg",
+        poster: "https://placehold.co/700x980/0d1117/c9d1d9?text=Renegade+Immortal",
         status: "ongoing",
         episodes: [
             {
@@ -229,4 +229,3 @@ if (document.getElementById('video-player')) {
         });
     }
 }
-
