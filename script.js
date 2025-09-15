@@ -3,7 +3,7 @@
 const donghuaData = [
     {
         id: 1,
-        title: "Renegade Immortal",
+        title: "https://i.imgur.com/mGXAPTG.jpeg",
         poster: "https://placehold.co/500x700/805ad5/white?text=Renegade+Immortal",
         status: "ongoing",
         episodes: [
@@ -11,7 +11,7 @@ const donghuaData = [
                 title: "Episode 1",
                 servers: [
                     // Contoh tautan YouTube embed
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
+                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1" },
                     { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
                 ]
             },
@@ -206,3 +206,4 @@ window.addEventListener('load', function() {
         document.getElementById('main-content').innerHTML = '<p class="text-center text-xl text-gray-400">Donghua tidak ditemukan.</p>';
     }
 });
+
