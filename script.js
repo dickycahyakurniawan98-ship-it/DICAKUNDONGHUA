@@ -1,210 +1,218 @@
-// This file contains all data and logic for the website.
-// The donghuaData array acts as a simple database.
+// This file acts as a single database for the donghua website,
+// and it also contains all the logic for displaying the content.
+
 const donghuaData = [
     {
         id: 1,
-        title: "Renegade immortal",
+        title: "Renegade Immortal",
         poster: "https://i.imgur.com/mGXAPTG.jpeg",
         status: "ongoing",
         episodes: [
             {
                 title: "Episode 1",
                 servers: [
-                    // Contoh tautan YouTube embed
-                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1," },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/Fjqj4cM0fU4" }
                 ]
             },
             {
                 title: "Episode 2",
                 servers: [
-                    { name: "Server 1", url: "https://www.dailymotion.com/embed/video/x7y0hgy?autoplay=1," },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/S2qT6oXqP-g" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/K_9mX4z0oG0" }
+                ]
+            },
+            {
+                title: "Episode 3",
+                servers: [
+                    { name: "Server 1", url: "https://www.youtube.com/embed/Fjqj4cM0fU4" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/z4y5N2oM6a4" }
                 ]
             }
         ]
     },
     {
         id: 2,
-        title: "Judul Donghua 2",
-        poster: "https://placehold.co/500x700/E53E3E/white?text=Poster+2",
+        title: "Battle Through The Heavens",
+        poster: "https://placehold.co/700x980/E53E3E/ffffff?text=Poster+2",
         status: "completed",
         episodes: [
             {
                 title: "Episode 1",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/videoseries?si=c3z0E98xX9vX_H80&list=PLvHn5b3pL3L3lX8yKj4sJ4X9yX_H80" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/x-6tW6Xf-tU" }
                 ]
             },
             {
                 title: "Episode 2",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/t-9u6jF-J-o" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/Q-8zW8F-y-o" }
                 ]
             },
             {
                 title: "Episode 3",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/Fjqj4cM0fU4" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/z4y5N2oM6a4" }
                 ]
             }
         ]
     },
     {
         id: 3,
-        title: "Judul Donghua 3",
-        poster: "https://placehold.co/500x700/38A169/white?text=Poster+3",
+        title: "A Will Eternal",
+        poster: "https://placehold.co/700x980/2F855A/ffffff?text=Poster+3",
         status: "ongoing",
         episodes: [
             {
                 title: "Episode 1",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/z4y5N2oM6a4" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/S2qT6oXqP-g" }
                 ]
             },
             {
                 title: "Episode 2",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/Fjqj4cM0fU4" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/x-6tW6Xf-tU" }
                 ]
             },
             {
                 title: "Episode 3",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/Q-8zW8F-y-o" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/t-9u6jF-J-o" }
                 ]
             },
             {
                 title: "Episode 4",
                 servers: [
-                    { name: "Server 1", url: "https://www.youtube.com/embed/dQw4w9WgXcQ" },
-                    { name: "Server 2", url: "https://www.youtube.com/embed/M7lc1UVf-VE" }
+                    { name: "Server 1", url: "https://www.youtube.com/embed/t-9u6jF-J-o" },
+                    { name: "Server 2", url: "https://www.youtube.com/embed/Q-8zW8F-y-o" }
                 ]
-            },
+            }
         ]
     }
 ];
 
-// Logika untuk halaman indeks
-document.addEventListener("DOMContentLoaded", function() {
-    const latestContainer = document.getElementById('latest-episodes');
-    const popularContainer = document.getElementById('most-popular');
+// Logika untuk halaman index.html
+if (document.getElementById('latest-episodes')) {
+    const latestEpisodesContainer = document.getElementById('latest-episodes');
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const mainTitle = document.querySelector('.card-group-title');
+    const mobileSearchButton = document.querySelector('.search-icon');
 
-    // Filter donghua untuk bagian terbaru
-    const latestDonghua = donghuaData.slice(0, 3);
-    latestDonghua.forEach(donghua => {
-        latestContainer.appendChild(createDonghuaCard(donghua));
-    });
+    const createDonghuaCard = (donghua) => {
+        const lastEpisodeIndex = donghua.episodes.length - 1;
+        const lastEpisodeNumber = lastEpisodeIndex + 1;
+        const cardLink = `play.html?id=${donghua.id}&ep=${lastEpisodeIndex}`;
 
-    // Filter donghua untuk bagian terpopuler (saat ini sama dengan terbaru)
-    const popularDonghua = donghuaData.slice(0, 3);
-    popularDonghua.forEach(donghua => {
-        popularContainer.appendChild(createDonghuaCard(donghua));
-    });
-});
+        return `
+            <a href="${cardLink}" class="donghua-card block relative">
+                <div class="donghua-card-image-container">
+                    <img src="${donghua.poster}" alt="${donghua.title}" class="rounded-lg">
+                </div>
+                <div class="status-badge ${donghua.status === 'ongoing' ? 'ongoing' : 'completed'}">${donghua.status === 'ongoing' ? 'Ongoing' : 'Completed'}</div>
+                <div class="episode-badge">Ep ${lastEpisodeNumber}</div>
+                <div class="p-2">
+                    <h3 class="text-white text-sm font-semibold truncate">${donghua.title}</h3>
+                </div>
+            </a>
+        `;
+    };
 
-function createDonghuaCard(donghua) {
-    const cardLink = document.createElement('a');
-    const latestEpisodeIndex = donghua.episodes.length;
-    cardLink.href = `play.html?id=${donghua.id}&ep=${latestEpisodeIndex}`;
-    cardLink.className = 'donghua-card';
+    const displayDonghua = (donghuas) => {
+        latestEpisodesContainer.innerHTML = '';
+        if (donghuas.length === 0) {
+            latestEpisodesContainer.innerHTML = '<p class="col-span-full text-center text-gray-400">Tidak ada hasil ditemukan.</p>';
+        } else {
+            donghuas.forEach(donghua => {
+                const cardHTML = createDonghuaCard(donghua);
+                latestEpisodesContainer.innerHTML += cardHTML;
+            });
+        }
+    };
 
-    const cardContent = `
-        <div class="donghua-card-image-container">
-            <img src="${donghua.poster}" alt="${donghua.title}" class="w-full h-full object-cover">
-            <span class="status-badge ${donghua.status}">${donghua.status}</span>
-            <span class="episode-badge">Ep ${donghua.episodes.length}</span>
-        </div>
-        <div class="p-4">
-            <h3 class="text-white text-md font-semibold truncate">${donghua.title}</h3>
-        </div>
-    `;
-    cardLink.innerHTML = cardContent;
-    return cardLink;
+    const handleSearch = () => {
+        const query = searchInput.value.toLowerCase();
+        const filteredDonghua = donghuaData.filter(donghua =>
+            donghua.title.toLowerCase().includes(query)
+        );
+        displayDonghua(filteredDonghua);
+        mainTitle.textContent = query ? `Hasil Pencarian untuk "${query}"` : 'Terbaru';
+    };
+
+    searchButton.addEventListener('click', handleSearch);
+    searchInput.addEventListener('input', handleSearch);
+    mobileSearchButton.addEventListener('click', handleSearch);
+
+
+    displayDonghua(donghuaData);
 }
 
-
-// Logika untuk halaman pemutaran video
-window.addEventListener('load', function() {
-    console.log("Halaman pemutaran video dimuat.");
-
+// Logika untuk halaman play.html
+if (document.getElementById('video-player')) {
     const urlParams = new URLSearchParams(window.location.search);
     const donghuaId = parseInt(urlParams.get('id'));
-    const episodeNumber = parseInt(urlParams.get('ep')) || 1;
+    const episodeIndex = parseInt(urlParams.get('ep') || 0);
 
-    // Temukan data donghua yang cocok
     const donghua = donghuaData.find(d => d.id === donghuaId);
 
     if (donghua) {
-        document.getElementById('donghua-page-title').textContent = donghua.title;
         document.getElementById('donghua-title').textContent = donghua.title;
-        
-        // Atur episode dan server
-        const videoPlayer = document.getElementById('video-player');
-        const serverButtonsContainer = document.getElementById('server-buttons');
-        const episodeButtonsContainer = document.getElementById('episode-buttons');
 
-        function loadVideo(episodeIndex, serverIndex) {
-            console.log(`Memuat video untuk episode ${episodeIndex + 1}, server ${serverIndex + 1}`);
-            const episode = donghua.episodes[episodeIndex];
-            const server = episode.servers[serverIndex];
-            videoPlayer.src = server.url;
-            
-            // Perbarui tombol server
-            serverButtonsContainer.innerHTML = '';
-            episode.servers.forEach((s, index) => {
-                const serverButton = document.createElement('button');
-                serverButton.textContent = s.name;
-                serverButton.className = `px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${index === serverIndex ? 'bg-blue-600 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`;
-                serverButton.onclick = () => loadVideo(episodeIndex, index);
-                serverButtonsContainer.appendChild(serverButton);
-            });
-        }
-        
-        // Buat tombol episode
+        // Tampilkan server
+        const serversContainer = document.getElementById('server-buttons');
+        const loadVideo = (url) => {
+            const videoPlayer = document.getElementById('video-player');
+            videoPlayer.src = url;
+        };
+
+        donghua.episodes[episodeIndex].servers.forEach(server => {
+            const button = document.createElement('button');
+            button.className = 'bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300';
+            button.textContent = server.name;
+            button.onclick = () => loadVideo(server.url);
+            serversContainer.appendChild(button);
+        });
+
+        // Muat video episode pertama atau yang dipilih
+        loadVideo(donghua.episodes[episodeIndex].servers[0].url);
+
+        // Tampilkan tombol episode
+        const episodesContainer = document.getElementById('episode-buttons');
         donghua.episodes.forEach((episode, index) => {
-            const episodeButton = document.createElement('button');
-            episodeButton.textContent = `Episode ${index + 1}`;
-            episodeButton.className = `px-4 py-2 rounded-lg font-semibold transition-colors duration-300 ${index === episodeNumber - 1 ? 'bg-red-600 text-white' : 'bg-gray-700 text-gray-300 hover:bg-gray-600'}`;
-            episodeButton.onclick = () => {
-                // Perbarui URL dengan episode baru tanpa memuat ulang
-                history.pushState(null, '', `play.html?id=${donghuaId}&ep=${index + 1}`);
-                
-                // Perbarui tampilan tombol
-                document.querySelectorAll('#episode-buttons button').forEach(btn => btn.classList.remove('bg-red-600', 'text-white'));
-                episodeButton.classList.add('bg-red-600', 'text-white');
-                
-                // Muat video baru untuk episode yang dipilih
-                loadVideo(index, 0); // Selalu muat server pertama
-            };
-            episodeButtonsContainer.appendChild(episodeButton);
+            const button = document.createElement('a');
+            button.href = `play.html?id=${donghua.id}&ep=${index}`;
+            button.className = `bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full transition-colors duration-300 ${index === episodeIndex ? 'bg-blue-600' : ''}`;
+            button.textContent = `Ep ${index + 1}`;
+            episodesContainer.appendChild(button);
         });
 
-        // Muat episode yang diminta atau episode terbaru secara default
-        loadVideo(episodeNumber - 1, 0);
-
-        // Bagian rekomendasi
+        // Tampilkan rekomendasi acak
         const recommendationsContainer = document.getElementById('recommendations');
-        recommendationsContainer.innerHTML = '';
-        const allOtherDonghua = donghuaData.filter(d => d.id !== donghuaId);
-        
-        // Ambil 6 donghua secara acak
-        const shuffled = allOtherDonghua.sort(() => 0.5 - Math.random());
-        const recommendedDonghua = shuffled.slice(0, 6);
+        const shuffled = donghuaData.sort(() => 0.5 - Math.random());
+        const recommended = shuffled.slice(0, 6);
 
-        recommendedDonghua.forEach(item => {
-            const cardElement = createDonghuaCard(item);
-            recommendationsContainer.appendChild(cardElement);
+        recommended.forEach(item => {
+            const cardLink = `play.html?id=${item.id}&ep=${item.episodes.length - 1}`;
+            const cardHTML = `
+                <a href="${cardLink}" class="donghua-card block relative">
+                    <div class="donghua-card-image-container">
+                        <img src="${item.poster}" alt="${item.title}" class="rounded-lg">
+                    </div>
+                    <div class="status-badge ${item.status === 'ongoing' ? 'ongoing' : 'completed'}">${item.status === 'ongoing' ? 'Ongoing' : 'Completed'}</div>
+                    <div class="episode-badge">Ep ${item.episodes.length}</div>
+                    <div class="p-2">
+                        <h3 class="text-white text-sm font-semibold truncate">${item.title}</h3>
+                    </div>
+                </a>
+            `;
+            recommendationsContainer.innerHTML += cardHTML;
         });
-    } else {
-        document.getElementById('main-content').innerHTML = '<p class="text-center text-xl text-gray-400">Donghua tidak ditemukan.</p>';
     }
-});
-
-
+}
